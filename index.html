@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Virtual Pet Game</title>
+</head>
+<body>
+    <div class="mainContainer"></div>
+        <h1 id="title">Welcome to our virtual pet game!</h1>
+        <h2 id="subtitle">Choose your pokémon to begin!</h2>
+        <div class="imageContainer">
+            <button id="bulbButton" class="pokeButton">
+                <img src="images/bulbasaur.png" alt="" srcset="">
+                <audio id="bulbSound" src="" autoplay="false"></audio>
+            </button>
+            <button id="charButton" class="pokeButton">
+                <img src="images/charmander.png" alt="" srcset="">
+                <audio id="charSound" src="" autoplay="false"></audio>
+            </button>
+            <button id="squiButton" class="pokeButton">
+                <img src="images/squirtle.png" alt="" srcset="">
+                <audio id="squiSound" src="" autoplay="false"></audio>
+            </button> 
+            <div id="barContainer">
+                <label>
+                    <progress id="progressbar1" class="progress is-large is-info" max="100" value="100">
+                            <div id="myBar1">100%</div>
+                    </progress>
+                </label>
+                <progress id="progressbar2" class="progress is-large is-info" max="100" value="100">
+                    <div id="myBar2">100%</div>
+                </progress>
+                <progress id="progressbar3" class="progress is-large is-info" max="100" value="100">
+                    <div id="myBar3">100%</div>
+                </progress>
+                <progress id="progressbar4" class="progress is-large is-info" max="100" value="100">
+                    <div id="myBar4">100%</div>
+                </progress>
+                <progress id="progressbar5" class="progress is-large is-info" max="100" value="0">
+                    <div id="myBar5">100%</div>
+                </progress>
+            </div>
+            <div id="labelContainer">
+                <span>Hunger</span>
+                <span>Boredom</span>
+                <span>Thirst</span>
+                <span id="specialLabel">Special</span>
+                <span>EXP</span>
+            </div>
+        </div>
+        </br>
+        <div id="testButtonContainer">
+            <button onclick="move()">Click Me</button>
+            <button onclick="incrFeed()">Feed</button>
+        </div>
+        <div class="container">
+            <button id="feed" onclick="incrFeed()" class="box">
+                <p>Feed</p>                
+            </button>
+            <button id="play" onclick="incrFun()" class="box">
+              <p>Play</p>            
+            </button>
+            <button id="water" onclick="incrWater()" class="box">
+              <p>Water</p>            
+            </button>
+            <button id="button4" onclick="incr4()" class="box">
+                <p>X</p>            
+              </button>
+            <button id="start" class="box">
+                <audio id="battleSound" src="" autoplay="false"></audio>
+                <p>Start Game</p>
+            </button>
+            <button id="playAgain" class="box">
+                <p>Play again</p>               
+            </button>
+        </div> 
+
+<script src="script.js"></script>
+</body>
+</html>
