@@ -22,10 +22,11 @@ const subtitle = document.getElementById("subtitle");
 const button = document.getElementsByTagName("button");
 const labels = document.getElementById("labelContainer");
 const specialLabel = document.getElementById("specialLabel");
-const bulbSound = document.getElementById("bulbSound");
-const charSound = document.getElementById("charSound");
-const squiSound = document.getElementById("squiSound");
-const battleSound = document.getElementById("battleSound");
+const charSound = new Audio("sounds/charmander.mp3");
+const bulbSound = new Audio("sounds/bulbasaur.mp3");
+const squirSound = new Audio("sounds/squirtle.mp3");
+const battleSound = new Audio("sounds/battle.mp3");
+
 
 class Pokemon {
   constructor(hunger, boredom, thirst) {
@@ -64,7 +65,7 @@ playAgain.style.display = "none";
 
 charmanderImage.addEventListener("click", () => {  
   charSound.volume = 0.3;
-  charSound.src = "sounds/charmander.mp3";  
+  charSound.play(); 
   title.textContent = "You chose Charmander!";
   subtitle.textContent = "Don't let their flame go out!";
   charmanderImage.disabled = true;
@@ -93,8 +94,8 @@ charmanderImage.addEventListener("click", () => {
   })  
 })
 squirtleImage.addEventListener("click", () => {
-  squiSound.volume = 0.3;
-  squiSound.src = "sounds/squirtle.mp3";
+  squirSound.volume = 0.3;
+  squirSound.play();
   title.textContent = "You chose Squirtle!";
   subtitle.textContent = "Don't let them dry out!";
   squirtleImage.disabled = true;
@@ -123,7 +124,7 @@ squirtleImage.addEventListener("click", () => {
 })
 bulbasaurImage.addEventListener("click", () => {
   bulbSound.volume = 0.3;
-  bulbSound.src = "sounds/bulbasaur.mp3";
+  bulbSound.play();
   title.textContent = "You chose Bulbasaur!";
   subtitle.textContent = "Don't let them wither!";
   bulbasaurImage.disabled = true;
@@ -141,7 +142,7 @@ bulbasaurImage.addEventListener("click", () => {
   start.addEventListener("click", () => {
     move();
     battleSound.volume = 0.1;
-    battleSound.src = "sounds/battle.mp3";
+    battleSound.play();
     start.style.display = "none";
     feed.style.display = "block";
     water.style.display = "block";
