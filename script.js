@@ -83,7 +83,7 @@ charmanderImage.addEventListener("click", () => {
   start.addEventListener("click", () => {
     move();
     battleSound.volume = 0.1;
-    battleSound.src = "sounds/battle.mp3";
+    battleSound.play();
     start.style.display = "none";
     feed.style.display = "block";
     water.style.display = "block";
@@ -112,7 +112,7 @@ squirtleImage.addEventListener("click", () => {
   start.addEventListener("click", () => {
     move();
     battleSound.volume = 0.1;
-    battleSound.src = "sounds/battle.mp3";
+    battleSound.play();
     start.style.display = "none";
     feed.style.display = "block";
     water.style.display = "block";
