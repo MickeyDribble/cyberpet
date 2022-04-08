@@ -8,15 +8,12 @@ const progress3 = document.getElementById("progressbar3");
 const progress4 = document.getElementById("progressbar4");
 const progress5 = document.getElementById("progressbar5");
 const progress = document.getElementById("barContainer");
-const testButton = document.getElementById("testButtonContainer");
 const feed = document.getElementById("feed");
 const play = document.getElementById("play");
 const start = document.getElementById("start");
 const water = document.getElementById("water");
 const button4 = document.getElementById("button4");
-const myBar1 = document.getElementById("myBar1");
-const myBar2 = document.getElementById("myBar2");
-const myBar3 = document.getElementById("myBar3");
+
 const title = document.getElementById("title");
 const subtitle = document.getElementById("subtitle");
 const button = document.getElementsByTagName("button");
@@ -130,7 +127,6 @@ bulbasaurImage.addEventListener("click", () => {
   bulbasaurImage.disabled = true;
   squirtleImage.style.display = "none";
   charmanderImage.style.display = "none";
-  myBar1.style.backgroundColor = "orange";
   progress1.value = bulbChoice.hunger;
   progress2.value = bulbChoice.boredom;
   progress3.value = bulbChoice.thirst;
@@ -231,4 +227,3 @@ function incr4() {
 playAgain.addEventListener("click", () => {
   window.location.reload();
 });
-

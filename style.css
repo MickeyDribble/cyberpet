@@ -63,8 +63,8 @@
   }
   button:active {
     transform: scale(1.1);  
-    border-color: blueviolet;
   }
+  
   .imageContainer{
     display: flex;
     justify-content: center;
@@ -89,14 +89,14 @@
     font-weight:bolder;
     background-color:rgba(20, 69, 143, 0.2);
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    padding:16px
+    
   }
   .progress.is-large {
     height: 30px;
     margin: 10px;
   }
-  #testButtonContainer {
-    display: none;
-  }
+  
   #barContainer {
     display: flex;
     justify-content: center;
@@ -104,23 +104,13 @@
     display: none;
     background-color:rgba(20, 69, 143, 0.2);
   }
-  #myBar1,
-  #myBar2,
-  #myBar3 {
-    width: 10%;
-    height: 30px;
-    color: #8eaa04;
-    text-align: center; /* To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
-    color: white;
-  }
+  
   #labelContainer {
     display: flex;
     flex-direction: column; 
     display: none;  
   }
-  #labelContainer span {
-    padding: 16px;
-  }
+  
+    
   
 
