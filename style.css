@@ -9,7 +9,8 @@
   body {
     background-image: url(images/2714119.png);
     background-position: center center;
-    background-size:cover
+    background-size:cover;
+    background-repeat: no-repeat;
   }
   #title {
     padding-bottom: 50px;
