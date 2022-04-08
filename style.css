@@ -35,6 +35,7 @@
   }
   .box {
     margin: 10px;
+    padding:15px;
     text-align: center;
     vertical-align: text-top;
     width: 20%;
@@ -45,6 +46,8 @@
     font-weight:bolder;
     cursor:pointer;
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+
+
   }
   .container {
     display: flex;
@@ -97,6 +100,7 @@
     justify-content: center;
     flex-direction: column;
     display: none;
+    background-color:rgba(20, 69, 143, 0.2);
   }
   #myBar1,
   #myBar2,
