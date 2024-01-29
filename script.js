@@ -23,6 +23,8 @@ const charSound = new Audio("sounds/charmander.mp3");
 const bulbSound = new Audio("sounds/bulbasaur.mp3");
 const squirSound = new Audio("sounds/squirtle.mp3");
 const battleSound = new Audio("sounds/battle.mp3");
+const evolveSound = new Audio("sounds/pokemon-evolve.mp3");
+
 
 
 class Pokemon {
@@ -60,7 +62,9 @@ const squiChoice = new Squirtle(65);
 
 playAgain.style.display = "none";
 
-charmanderImage.addEventListener("click", () => {  
+let evolutions = 0;
+
+charmanderImage.addEventListener("click", () => { 
   charSound.volume = 0.3;
   charSound.play(); 
   title.textContent = "You chose Charmander!";
@@ -75,10 +79,52 @@ charmanderImage.addEventListener("click", () => {
   progress4.value = charChoice.arson;  
   progress.style.display = "flex"; 
   labels.style.display = "flex";
-  specialLabel.textContent = "Fire power";
+  specialLabel.textContent = "Fire";
   start.style.display = "block";
   start.addEventListener("click", () => {
-    move();
+      
+      let a = setInterval(function() {
+        progress1.value = progress1.value - 0.07;
+        progress2.value = progress2.value - 0.09;
+        progress3.value = progress3.value - 0.08;
+        progress4.value = progress4.value - 0.09;
+        
+        if (progress1.value == 0) {
+          battleSound.pause();
+          confLose();
+          clearInterval(a);
+        } else if (progress2.value == 0) {
+          battleSound.pause();
+          confLose();
+          clearInterval(a);
+        } else if (progress3.value == 0) {
+          battleSound.pause();
+          confLose();   
+          clearInterval(a);
+        } else if (progress4.value == 0) {
+          battleSound.pause();
+          confLose();   
+          clearInterval(a); 
+        } else if (progress5.value == 100 && evolutions == 1){
+          battleSound.pause();
+          evolveSound.play()
+          confWin()
+          title.textContent = "Wow! Your Charmander has fully evolved, into Charizard!"
+          charmanderImage.children[0].src = "images/zard.png"
+          clearInterval(a)
+          
+        } else if (progress5.value == 100) {
+          evolveSound.play()
+          progress5.value = 0
+          evolutions+=1
+          console.log(evolutions)
+          charmanderImage.children[0].src = "images/005.png"
+          ;
+          
+        }
+
+      }, 25);
+    
     battleSound.volume = 0.1;
     battleSound.play();
     start.style.display = "none";
@@ -86,7 +132,7 @@ charmanderImage.addEventListener("click", () => {
     water.style.display = "block";
     play.style.display = "block";
     button4.style.display = "block";
-    button4.textContent = "Commit arson";
+    button4.textContent = "Fire";
     button4.style.fontSize = "30px"; 
   })  
 })
@@ -104,10 +150,50 @@ squirtleImage.addEventListener("click", () => {
   progress4.value = squiChoice.swimPractice;  
   progress.style.display = "flex";  
   labels.style.display = "flex";
-  specialLabel.textContent = "Water power";
+  specialLabel.textContent = "Water";
   start.style.display = "block";
   start.addEventListener("click", () => {
-    move();
+    let a = setInterval(function() {
+      progress1.value = progress1.value - 0.07;
+      progress2.value = progress2.value - 0.09;
+      progress3.value = progress3.value - 0.08;
+      progress4.value = progress4.value - 0.09;
+      
+      if (progress1.value == 0) {
+        battleSound.pause();
+        confLose();
+        clearInterval(a);
+      } else if (progress2.value == 0) {
+        battleSound.pause();
+        confLose();
+        clearInterval(a);
+      } else if (progress3.value == 0) {
+        battleSound.pause();
+        confLose();   
+        clearInterval(a);
+      } else if (progress4.value == 0) {
+        battleSound.pause();
+        confLose();   
+        clearInterval(a); 
+      } else if (progress5.value == 100 && evolutions == 1){
+        battleSound.pause();
+        evolveSound.play()
+        confWin()
+        title.textContent = "Wow! Your Squirtle has fully evolved, into Blastoise!"
+        squirtleImage.children[0].src = "images/blastoise.png"
+        clearInterval(a)
+        
+      } else if (progress5.value == 100) {
+        evolveSound.play()
+        progress5.value = 0
+        evolutions+=1
+        console.log(evolutions)
+        squirtleImage.children[0].src = "images/008.png"
+        ;
+        
+      }
+
+    }, 25);
     battleSound.volume = 0.1;
     battleSound.play();
     start.style.display = "none";
@@ -133,10 +219,52 @@ bulbasaurImage.addEventListener("click", () => {
   progress4.value = bulbChoice.sun; 
   progress.style.display = "flex";
   labels.style.display = "flex";
-  specialLabel.textContent = "Plant power";
+  specialLabel.textContent = "Plant";
   start.style.display = "block";
   start.addEventListener("click", () => {
-    move();
+    let a = setInterval(function() {
+      progress1.value = progress1.value - 0.07;
+      progress2.value = progress2.value - 0.09;
+      progress3.value = progress3.value - 0.08;
+      progress4.value = progress4.value - 0.09;
+      
+      if (progress1.value == 0) {
+        battleSound.pause();
+        confLose();
+        clearInterval(a);
+      } else if (progress2.value == 0) {
+        battleSound.pause();
+        confLose();
+        clearInterval(a);
+      } else if (progress3.value == 0) {
+        battleSound.pause();
+        confLose();   
+        clearInterval(a);
+      } else if (progress4.value == 0) {
+        battleSound.pause();
+        confLose();   
+        clearInterval(a); 
+      } else if (progress5.value == 100 && evolutions == 1){
+        battleSound.pause();
+        evolveSound.play()
+        confWin()
+        title.textContent = "Wow! Your Bulbasaur has fully evolved, into Venusaur!"
+        bulbasaurImage.children[0].src = "images/venus.png"
+        clearInterval(a)
+        
+      } else if (progress5.value == 100) {
+        evolveSound.play()
+        progress5.value = 0
+        evolutions+=1
+        console.log(evolutions)
+        bulbasaurImage.children[0].src = "images/002.png"
+        ;
+        
+      }
+
+    }, 25);
+    
+    
     battleSound.volume = 0.1;
     battleSound.play();
     start.style.display = "none";
@@ -149,31 +277,7 @@ bulbasaurImage.addEventListener("click", () => {
   })
 })
 
-function move() {
-  let a = setInterval(function() {
-    progress1.value = progress1.value - 0.07;
-    progress2.value = progress2.value - 0.09;
-    progress3.value = progress3.value - 0.08;
-    progress4.value = progress4.value - 0.09;
-    
-    if (progress1.value == 0) {
-      confLose();
-      clearInterval(a);
-    } else if (progress2.value == 0) {
-      confLose();
-      clearInterval(a);
-    } else if (progress3.value == 0) {
-      confLose();   
-      clearInterval(a);
-    } else if (progress4.value == 0) {
-      confLose();   
-      clearInterval(a); 
-    } else if (progress5.value == 100) {
-      confWin();
-      clearInterval(a);
-    }
-  }, 25);
-}
+
 function confLose() {
     feed.style.display = "none";
     water.style.display = "none";
@@ -181,6 +285,8 @@ function confLose() {
     button4.style.display = "none";
     start.style.display = "none";
     playAgain.style.display = "block";
+    progress.style.display = "none";
+    labels.style.display = "none"
     title.textContent = "You lose! Try again!";
     subtitle.textContent = " ";
 }
@@ -191,37 +297,105 @@ function confWin() {
     button4.style.display = "none";
     start.style.display = "none";
     playAgain.style.display = "block";
-    title.textContent = "Your pokémon has levelled up! You win!";
-    subtitle.textContent = "How about another round?!";
+    progress.style.display = "none";
+    labels.style.display = "none"
+    subtitle.textContent = "Congratulations, you win!";
+    
+  
+}
+
+function move(){
+  let a = setInterval(function() {
+    progress1.value = progress1.value - 0.07;
+    progress2.value = progress2.value - 0.09;
+    progress3.value = progress3.value - 0.08;
+    progress4.value = progress4.value - 0.09;
+    
+    if (progress1.value == 0) {
+      battleSound.pause();
+      confLose();
+      clearInterval(a);
+    } else if (progress2.value == 0) {
+      battleSound.pause();
+      confLose();
+      clearInterval(a);
+    } else if (progress3.value == 0) {
+      battleSound.pause();
+      confLose();   
+      clearInterval(a);
+    } else if (progress4.value == 0) {
+      battleSound.pause();
+      confLose();   
+      clearInterval(a); 
+    }
+  })
 }
 function incrFeed() {
-  progress1.value += 10;
-  progress2.value -= 2;
-  progress3.value -= 2;
-  progress4.value -= 2;
-  progress5.value += 10;
+  if(evolutions === 1) {
+    console.log("evolutution is 1")
+    progress1.value += 10;
+    progress2.value -= 2;
+    progress3.value -= 2;
+    progress4.value -= 2;
+    progress5.value += 2.5;
+  } else if(evolutions != 1){
+     progress1.value += 10;
+     progress2.value -= 2;
+     progress3.value -= 2;
+     progress4.value -= 2;
+     progress5.value += 5
+  }
+
+  
 
 }
 function incrFun() {
-  progress2.value += 10;
-  progress1.value -= 2;
-  progress3.value -= 2;
-  progress4.value -= 2;
-  progress5.value += 10;
+  if(evolutions === 1) {
+    progress2.value += 10;
+    progress1.value -= 2;
+    progress3.value -= 2;
+    progress4.value -= 2;
+    progress5.value += 2.5;
+  }else if(evolutions != 1){
+    progress2.value += 10;
+    progress1.value -= 2;
+    progress3.value -= 2;
+    progress4.value -= 2;
+    progress5.value += 5;
+  }
+  
 }
 function incrWater() {
-  progress3.value += 10;
-  progress2.value -= 2;
-  progress1.value -= 2;
-  progress4.value -= 2;
-  progress5.value += 10;
+  if(evolutions === 1) {
+    progress3.value += 10;
+    progress2.value -= 2;
+    progress1.value -= 2;
+    progress4.value -= 2;
+    progress5.value += 2.5;
+  }else if(evolutions != 1){
+    progress3.value += 10;
+    progress2.value -= 2;
+    progress1.value -= 2;
+    progress4.value -= 2;
+    progress5.value += 5;
+  }
+  
 }
 function incr4() {
-  progress4.value += 10;
-  progress3.value -= 2;
-  progress2.value -= 2;
-  progress1.value -= 2;
-  progress5.value += 10;
+  if(evolutions === 1) {
+    progress4.value += 10;
+    progress3.value -= 2;
+    progress2.value -= 2;
+    progress1.value -= 2;
+    progress5.value += 2.5;
+  }else if(evolutions != 1){
+    progress4.value += 10;
+    progress3.value -= 2;
+    progress2.value -= 2;
+    progress1.value -= 2;
+    progress5.value += 5;
+  }
+  
 }
 
 playAgain.addEventListener("click", () => {
