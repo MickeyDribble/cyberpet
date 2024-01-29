@@ -128,17 +128,10 @@
       flex-direction:column
     }
 
-    #labelContainer {
-      font-size: 0.8em;
     
-      margin-top: -17em;
-      margin-left: 0.3em;
-      width:120px;
-    }
 
     #labelContainer span {
-       background: none;
-       padding:0.7em
+       display:none;
     }
 
     #labelContainer span:nth-child(3) {
@@ -180,6 +173,45 @@
       width:50%;
       height:30vh
     }
+
+    #progressbar1::before {
+      content: "Hunger";
+      color:white;
+      text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+      font-weight:bold
+      
+    }
+    #progressbar2::before {
+      content: "Boredom";
+      color:white;
+      text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+      font-weight:bold
+      
+    }
+
+    #progressbar3::before {
+      content: "Thirst";
+      color:white;
+      text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+      font-weight:bold
+      
+    }
+
+    #progressbar4::before {
+      content: "Special";
+      color:white;
+      text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+      font-weight:bold
+      
+    }
+    #progressbar5::before {
+      content: "EXP";
+      color:white;
+      text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+      font-weight:bold
+      
+    }
+
 
     .container {
       flex-wrap:wrap;
