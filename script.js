@@ -150,7 +150,7 @@ squirtleImage.addEventListener("click", () => {
   progress4.value = squiChoice.swimPractice;  
   progress.style.display = "flex";  
   labels.style.display = "flex";
-  specialLabel.textContent = "Water";
+  specialLabel.textContent = "Swim";
   start.style.display = "block";
   start.addEventListener("click", () => {
     let a = setInterval(function() {
@@ -201,7 +201,7 @@ squirtleImage.addEventListener("click", () => {
     water.style.display = "block";
     play.style.display = "block";
     button4.style.display = "block";
-    button4.textContent = "Practice swimming";
+    button4.textContent = "Swim";
     button4.style.fontSize = "30px"; 
   })
 })
@@ -272,7 +272,7 @@ bulbasaurImage.addEventListener("click", () => {
     water.style.display = "block";
     play.style.display = "block";
     button4.style.display = "block";
-    button4.textContent = "Soak some rays";
+    button4.textContent = "Plant";
     button4.style.fontSize = "30px"; 
   })
 })
