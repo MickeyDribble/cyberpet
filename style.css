@@ -216,12 +216,20 @@
     .container {
       flex-wrap:wrap;
     }
+
+    .container:nth-child(4) {
+      font-size: 52em
+    }
     p {
       font-size: 1.2em
     }
 
     #specialLabel {
       font-size:12px;
+      
+    }
+    #button4 {
+      font-size: 1.2em
       
     }
       

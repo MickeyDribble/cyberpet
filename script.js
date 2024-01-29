@@ -133,7 +133,7 @@ charmanderImage.addEventListener("click", () => {
     play.style.display = "block";
     button4.style.display = "block";
     button4.textContent = "Fire";
-    button4.style.fontSize = "30px"; 
+     
   })  
 })
 squirtleImage.addEventListener("click", () => {
@@ -202,7 +202,6 @@ squirtleImage.addEventListener("click", () => {
     play.style.display = "block";
     button4.style.display = "block";
     button4.textContent = "Swim";
-    button4.style.fontSize = "30px"; 
   })
 })
 bulbasaurImage.addEventListener("click", () => {
@@ -273,7 +272,7 @@ bulbasaurImage.addEventListener("click", () => {
     play.style.display = "block";
     button4.style.display = "block";
     button4.textContent = "Plant";
-    button4.style.fontSize = "30px"; 
+     
   })
 })
 
